@@ -8,7 +8,6 @@ class GitHubActionsApplicationTests {
 
     @Test
     fun contextLoads() {
-        // Tests if our context actually starts
     }
 
 }
