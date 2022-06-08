@@ -34,7 +34,7 @@ on:
 env:
   TAG: maarten
   AWS_REGION: eu-west-1                       # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: 'github-actions:maarten'              # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: 'github-actions:wonniepenny'              # set this to your Amazon ECR repository name
 
 permissions:
   contents: read
@@ -83,5 +83,5 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$TAG
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$TAG"
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY"
